@@ -2,24 +2,24 @@
 
     <aura:attribute name="lstBMI" type="List" />
 
-    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
-    <aura:handler event="c:BMIApplicationEvent" action="{!c.handleRecordSaved}"/>
+    <aura:handler event="c:BMIApplicationEvent" action="{!c.handleRecordSaved}" />
 
     <aura:if isTrue="{! and(v.lstBMI, v.lstBMI.length) }">
         <table class="slds-table slds-table_cell-buffer slds-table_bordered">
             <thead>
-            <tr class="slds-line-height_reset">
-                <th class="" scope="col">
-                <div class="slds-truncate" title="Height">Height</div>
-                </th>
-                <th class="" scope="col">
-                <div class="slds-truncate" title="Weight">Weight</div>
-                </th>
-                <th class="" scope="col">
-                <div class="slds-truncate" title="BMI">BMI</div>
-                </th>
-            </tr>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Height">Height</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Weight">Weight</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="BMI">BMI</div>
+                    </th>
+                </tr>
             </thead>
             <tbody>
                 <aura:iteration items="{!v.lstBMI}" var="bmi">
@@ -39,4 +39,4 @@
         </table>
     </aura:if>
 
-</aura:component>	
+</aura:component>
