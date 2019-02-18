@@ -3,10 +3,11 @@
 	<aura:attribute name="weight" type="Decimal" />
 
     <aura:attribute name="bmi" type="Decimal" />  
-       
+    
+    <aura:registerEvent name="showMessage" type="c:BMIComponentEvent"/>
+
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 
-    <aura:registerEvent name="showMessage" type="c:BMIComponentEvent"/>
 
     <div class="bmi-wrapper">
         <div class="slds-form slds-form_stacked">
